@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ку!</title>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        p, span, div {
+            font-size: 12pt;
+        }
+        .container {
+            max-width: 800px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background-color: blueviolet;
+            padding: .3em;
+            color: #fff;
+            display: inline-block;
+        }
+        .example-domains, .example-domains * {
+            font-size: 20pt !important;
+        }
+        .instructions nav label {
+            user-select: none;
+            outline: none;
+            cursor: pointer;
+            display: table-cell;
+            border: 2px solid #000;
+            border-top: none;
+            left: 0;
+            font-weight: 600;
+            font-size: 1em;
+            height: 2em;
+            width: 2em;
+            line-height: 2em;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            border-color: blueviolet;
+        }
+        .instructions input {
+            position: absolute;
+            opacity: 0;
+            left: -99px;
+        }
+        .instructions nav {
+            display: inline-table;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .instructions input:checked+article {
+            display: inline-block;
+        }
+
+        .instructions article {
+            display: none;
+            background: blueviolet;
+            margin: 0;
+            padding: 1.2em;
+            width: 100%;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        .instructions article a {
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid black;
+        }
+        .active {
+            border-right: 2px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>👋 Ку!</h1></div>
+        <p>Вы FrontEnd разработчик, который ищет бесплатное местечко в Интернете для размещения собственного сайта? Приглянитесь к <a href="https://pages.github.com" target="_blank" rel="noreferrer">GitHub Pages</a>. Ну а чтобы иметь классный домен, мы дадим тебе бесплатный и классный URL, как здесь:</p>
+        <p>
+            <div class="badge example-domains">
+                https://<span id="writer" class="active">welcome</span>.ку.pw
+            </div>
+        </p>
+        <p>Всё что нужно от Вас - <span class="badge">обновляемый актуальный контент</span>. А для того, чтобы свершилась магия, понадобятся 4 простых шага:</p>
+        <p>
+            <div class="instructions">
+                <input type="radio" name="step" id="a1I" checked>
+                <article>
+                    <h3>1. GitHub Pages</h3>
+                    <p>Если Вы еще не настроили GitHub Pages, пора это сделать. Войдите в аккаунт GitHub, перейдите в нужный репозиторий и следуйте <a href="https://pages.github.com">инструкции</a>.</p>
+                </article>
+                <input type="radio" id="a2I" name="step">
+                <article>
+                    <h3>2. Домен</h3>
+                    <p>Самое время решить, какой домен выбрать. Используйте имя пользователя (организации) или репозитория. Например, для GitHub Pages foo.github.io/bar подойдут домены foo.ку.pw и bar.ку.pw.</p>
+                </article>
+                <input type="radio" name="step" id="a3I">
+                <article>
+                    <h3>3. CNAME</h3>
+                    <p>В корне репозитория создайте файл <i>CNAME</i>, содержащий всего одну строку - выбранный домен. Например, "foo.ку.pw" (без кавычек)</p>
+                </article>
+                <input type="radio" id="a4I" name="step">
+                <article>
+                    <h3>4. Финишная прямая!</h3>
+                    <p>Создайте Pull Request в нашем репозитории. Так как заявки обрабатываются вручную, может пройти некоторое время, прежде чем заявку одобрят или отклонят.</p>
+                </article>
+                <nav>
+                    <label for="a1I">1</label>
+                    <label for="a2I">2</label>
+                    <label for="a3I">3</label>
+                    <label for="a4I">4</label>
+                </nav>
+            </div>
+        </p>
+        <p><span class="badge"><b>Важно</b></span> Как владелец репозитория, Вы несете полную ответственность за опубликованные на сайте материалы. За нарушение <a href="/rules.html">правил</a> Ваш сайт будет исключен из базы без предупреждения.</p>
+        <footer>
+            <a href="/rules.html">Условия использования</a> <a href="/contacts.html">Контакты</a>
+        </footer>
+    </div>
+    <script>
+        var r = window.location.search.slice(1, 20);
+        (function(e, t) {
+        if (!(e = document.getElementById(e)))
+            return;
+        r && t.unshift(r.substring(0, 8));
+        let i = 1e3 / 4
+          , s = 1
+          , a = .2
+          , u = 3e3
+          , c = 1e3 / 16
+          , h = 1
+          , f = .2
+          , g = 500
+          , n = e.innerHTML
+          , o = n.length
+          , m = -1
+          , l = ()=>{
+            o-- > 0 ? (e.className = "active",
+            e.innerHTML = n.slice(0, o),
+            setTimeout(l, c + c * o / n.length * h + c * f * Math.random())) : (n = "" + t[m = (m + 1) % t.length],
+            setTimeout(d, g))
+        }
+          , d = ()=>{
+            o++ < n.length ? (e.innerHTML = n.slice(0, o),
+            setTimeout(d, i + i * -o / n.length * s + i * a * Math.random())) : (e.className = "",
+            setTimeout(l, u))
+        }
+        ;
+        d()
+    })("writer", ["your", "domain", "4free", "user", "site", "library"])
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ку!</title>
+    <style>
+        * {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        p, span, div {
+            font-size: 12pt;
+        }
+        .container {
+            max-width: 800px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background-color: blueviolet;
+            padding: .3em;
+            color: #fff;
+            display: inline-block;
+        }
+        .example-domains, .example-domains * {
+            font-size: 20pt !important;
+        }
+        .instructions nav label {
+            user-select: none;
+            outline: none;
+            cursor: pointer;
+            display: table-cell;
+            border: 2px solid #000;
+            border-top: none;
+            left: 0;
+            font-weight: 600;
+            font-size: 1em;
+            height: 2em;
+            width: 2em;
+            line-height: 2em;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            border-color: blueviolet;
+        }
+        .instructions input {
+            position: absolute;
+            opacity: 0;
+            left: -99px;
+        }
+        .instructions nav {
+            display: inline-table;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .instructions input:checked+article {
+            display: inline-block;
+        }
+
+        .instructions article {
+            display: none;
+            background: blueviolet;
+            margin: 0;
+            padding: 1.2em;
+            width: 100%;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        .instructions article a {
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid black;
+        }
+        .active {
+            border-right: 2px solid #fff;
+        }
+        a.header {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="header"><h1>👋 Ку!</h1></a>
+        <p><h2>Контакты</h2></p>
+        <p>КУ.PW это некоммерческий индивидуальный проект. Он направлен на предоставление бесплатного доменного имени для разработчиков.</p>
+        <h3>Владелец</h3>
+        <ul>
+            <li>Эдуард Ильин</li>
+            <li>Web: dpud.net</li>
+            <li><b>Адрес электронной почты для связи:</b> mralis@dpkgsoft.com</li>
+        </ul>
+        <footer>
+            <a href="/rules.html">Условия использования</a>
+        </footer>
+    </div>
+</body>
+</html>
